@@ -1,0 +1,133 @@
+version,1 //This is using the new seriko definition. If you want to use the old one, change the version to 0
+
+//The surfaces in this shell have high numbers since that's how I learned to do it on Deviantart.
+
+surface0 //Idle
+{
+	element0,overlay,surface0000.png,0,0
+	//As a note, you can put your images in subfolders! I'd be careful doing it, but it could be very helpful! It would look something like this
+	//element0,overlay,yourfolder/surface0.png,0,0
+	//Any images in subfolders HAVE to be defined in a surface before you can use them in animations, though.
+	
+	//Blink
+	0interval,random,3
+	0pattern0,-1,10,overlayfast,0,0
+	0pattern1,0200,5,overlayfast,0,0
+	0pattern2,0101,10,overlayfast,0,0
+	0pattern3,-1,30,overlayfast,0,00
+}
+
+surface1 //Petting
+{
+	element0,overlay,surface0000.png,0,0
+	element1,overlay,surface0500.png,0,0
+}
+
+surface6 //Action
+{
+	element0,overlay,surface0000.png,0,0
+}
+
+surface25 //Singing
+{
+	element0,overlay,surface0000.png,0,0
+	
+	//musical notes
+	14interval,random,2
+	14pattern0,9000,0,overlay,0,0
+	14pattern1,9001,90,overlay,0,0
+	14pattern2,9002,90,overlay,0,0
+	14pattern3,-1,90,overlay,0,0
+
+	//mouth animation
+	4interval,always
+	4pattern0,0600,0,overlay,0,0
+	4pattern1,0603,17,overlay,0,0
+	4pattern2,0604,23,overlay,0,0
+	4pattern3,0601,10,overlay,0,0
+	4pattern4,0600,5,overlay,0,0
+	4pattern5,0601,10,overlay,0,0
+	4pattern6,0603,18,overlay,0,0
+	4pattern7,0605,35,overlay,0,0
+	4pattern8,0601,15,overlay,0,0
+	4pattern9,0604,24,overlay,0,0
+	4pattern10,0605,19,overlay,0,0
+
+	//blink
+	5interval,random,3
+	5pattern0,-1,10,overlayfast,0,0
+	5pattern1,0200,50,overlayfast,0,0
+	5pattern2,0101,100,overlayfast,0,0
+	5pattern3,-1,30,overlayfast,0,0
+
+	//eyes closed
+	6interval,random,20
+	6pattern0,0200,0,overlayfast,0,0
+	6pattern1,-1,7000,overlayfast,0,0
+
+	//strum animation
+	7interval,always
+	7pattern0,0800,5,overlay,0,0
+	7pattern1,0801,5,overlay,0,0
+	7pattern2,0802,5,overlay,0,0
+	7pattern3,0803,5,overlay,0,0
+	7pattern4,0804,5,overlay,0,0
+	7pattern5,0805,5,overlay,0,0
+	7pattern6,0805,5,overlay,0,0
+	7pattern7,0804,5,overlay,0,0
+	7pattern8,0803,5,overlay,0,0
+	7pattern9,0802,5,overlay,0,0
+	7pattern10,0801,5,overlay,0,0
+	7pattern11,0800,5,overlay,0,0
+
+	//fret animation 1 - to lowest
+	8interval,random,4
+	8pattern0,0703,9,overlay,0,0
+	8pattern1,0704,8,overlay,0,0
+	8pattern2,0705,7,overlay,0,0
+	8pattern3,0706,6,overlay,0,0
+	8pattern4,0707,5,overlay,0,0
+	8pattern5,0708,200,overlay,0,0
+	8pattern6,0707,7,overlay,0,0
+	8pattern7,0706,7,overlay,0,0
+	8pattern8,0705,7,overlay,0,0
+	8pattern9,0704,7,overlay,0,0
+	8pattern10,0703,7,overlay,0,0
+
+	//fret animation 2 - to highest
+	9interval,random,7
+	9pattern0,0703,5,overlay,0,0
+	9pattern1,0702,5,overlay,0,0
+	9pattern2,0701,5,overlay,0,0
+	9pattern3,0700,250,overlay,0,0
+	9pattern4,0701,5,overlay,0,0
+	9pattern5,0702,5,overlay,0,0
+	9pattern6,0703,5,overlay,0,0
+}
+
+//Soldier hat
+surface0900
+{
+	element0,overlay,surface0900.png,0,0
+}
+
+surface.append0-25,!10 //These collisions are appended to surfaces 0 through 25, except surface10 because that's the default Kero surface (which this shell isn't using)
+{
+	//stroke_p == pettable area
+	//play_button == play/next song if already playing
+	//stop_button1 == stop
+	//k_window == music panel (music bar in FLELE)
+	//menu == main menu (Any areas of the shell that do NOT have a hotspot will also act as the main menu, but you should keep this for compatibility with FLELE!)
+	//clear_button == Clear the playlist
+	
+	collision0,221, 76, 253, 96,play_button
+	collision1,163, 126, 220, 173,stop_button1
+	collision2,128,47,146,75,k_window
+	collision3,230, 107, 280, 135,clear_button
+	collision4,193, 30, 283 , 60,stroke_p
+	collision5,124, 201, 238, 291,menu
+
+	//Soldier hat
+	animation0900.interval,bind
+
+}

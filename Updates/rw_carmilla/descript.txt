@@ -1,0 +1,52 @@
+seriko.alignmenttodesktop,free
+seriko.use_self_alpha,1
+
+charset,UTF-8
+type,shell
+name,Dr. Carmilla
+craftman,Entropy
+craftmanurl,https://oxbowreality.tumblr.com
+homeurl,https://raw.githubusercontent.com/rowanwitch/Ukagaka/master/Updates/rw_carmilla/
+
+sakura.balloon.offsetx,50
+sakura.balloon.offsety,-50
+kero.balloon.offsetx,0
+kero.balloon.offsety,0
+sakura.balloon.alignment,none
+kero.balloon.alignment,none
+
+shiori.logo.filename,resources\niseshiori.png
+shiori.logo.x,16
+shiori.logo.y,256
+
+
+//Right click menu stuff
+
+// Menu Background
+menu.background.bitmap.filename,menu_background.png
+menu.foreground.bitmap.filename,menu_foreground.png
+
+menu.background.alignment,lefttop
+menu.foreground.alignment,lefttop
+
+// Menu font color
+menu.background.font.color.r,255
+menu.background.font.color.g,255
+menu.background.font.color.b,255
+
+// Menu foreground font color
+menu.foreground.font.color.r,0
+menu.foreground.font.color.g,0
+menu.foreground.font.color.b,0
+
+// Menu disabled font color
+menu.disable.font.color.r,165
+menu.disable.font.color.g,185
+menu.disable.font.color.b,200
+
+// Menu border/separator color
+menu.background.font.color.r,150
+menu.background.font.color.g,150
+menu.background.font.color.b,150
+
+sakura.bindgroup900.name,hat
